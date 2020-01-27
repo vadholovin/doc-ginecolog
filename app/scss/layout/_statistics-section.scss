@@ -1,0 +1,85 @@
+/* ==========================================================================
+   #STATISTICS-SECTION
+   ========================================================================== */
+
+.statistics-section {
+  padding-bottom: 60px;
+
+  @include mq($from: md) {
+    padding-bottom: 80px;
+  }
+  @include mq($from: lg) {
+    padding-bottom: 110px;
+  }
+}
+
+.statistics-row {
+  width: 100%;
+  max-width: 1010px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+
+  @include mq($from: sm) {
+    flex-direction: row;
+  }
+}
+
+.statistics-value {
+  flex-shrink: 0;
+  margin-bottom: 2.5rem;
+  padding-left: 38px;
+  padding-right: 38px;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 1.25;
+  color: #fff;
+  text-align: center;
+  background-color: $bg-highlight;
+
+  @include mq($from: xs) {
+    font-size: 80px;
+  }
+  @include mq($from: sm) {
+    font-size: 100px;
+    margin-right: 6%;
+    margin-bottom: 0;
+  }
+  @include mq($from: md) {
+    font-size: 120px;
+  }
+  @include mq($from: lg) {
+    font-size: 150px;
+  }
+}
+
+.statistics-desc {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+
+  @include mq($from: sm) {
+    text-align: left;
+  }
+}
+
+.statistics-desc--bigger {
+  font-weight: 600;
+  font-size: rem(24px);
+
+  @include mq($from: xs) {
+    font-size: rem(32px);
+  }
+  @include mq($from: sm) {
+    font-size: rem(36px);
+  }
+  @include mq($from: md) {
+    font-size: rem(40px);
+  }
+  @include mq($from: lg) {
+    font-size: rem(48px);
+  }
+}

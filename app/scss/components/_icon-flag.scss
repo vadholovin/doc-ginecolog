@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #ICON-FLAG
+   ========================================================================== */
+
+.icon-flag {
+  display: flex;
+  align-items: center;
+}
+
+.icon-flag__icon {
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+
+.icon-flag__text {
+  flex-grow: 1;
+}

@@ -1,0 +1,141 @@
+/* ==========================================================================
+   #GRAPH-SECTIONs
+   ========================================================================== */
+
+/* #graph-section-1
+   ========================================================================== */
+
+.graph-top .graph-y-axis {
+  width: 41%;
+
+  @include mq($from: md) {
+    width: 100%;
+    max-width: 280px;
+  }
+  @include mq($from: lg) {
+    max-width: 324px;
+  }
+}
+
+.graph-top .graph-y-axis__item {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 12px;
+
+  @include mq($from: sm) {
+    padding-right: 30px;
+  }
+
+  @include mq($from: lg) {
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.graph-top .graph-field {
+  padding-left: 4.338%;
+}
+
+.graph-top .graph-field__item {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  
+  @include mq($from: lg) {
+    height: 70px;
+    line-height: 70px;
+  }
+}
+
+.graph-top .graph-field__item-55 {
+  width: 77%;
+}
+
+.graph-top .graph-field__item-43 {
+  width: 59%;
+}
+
+
+/* #graph-section-2
+   ========================================================================== */
+
+.graph-section-2 h2 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.graph-mid .graph-y-axis__item {
+  padding-top: 20px;
+  padding-right: 12px;
+  padding-bottom: 20px;
+
+  @include mq($from: md) {
+    padding-top: 20px;
+    padding-right: 16px;
+    padding-bottom: 20px;
+  }
+  @include mq($from: lg) {
+    padding-top: 30px;
+    padding-right: 35px;
+    padding-bottom: 30px;
+  }
+}
+
+.graph-mid .graph-field__item {
+  padding-right: 16px;
+  text-align: right;
+
+  @include mq($from: md) {
+    padding-right: 30px;
+  }
+}
+
+.graph-mid .graph-field__item-5 { width: 8%; }
+.graph-mid .graph-field__item-7 { width: 12%; }
+.graph-mid .graph-field__item-12 { width: 20%; }
+.graph-mid .graph-field__item-15 { width: 24%; }
+.graph-mid .graph-field__item-23 { width: 38%; }
+.graph-mid .graph-field__item-40 { width: 66%; }
+
+
+/* #graph-section-3
+   ========================================================================== */
+
+.graph-section-3 h2 {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.graph-bottom .graph-y-axis {
+  width: 41%;
+
+  @include mq($from: md) {
+    width: 100%;
+    max-width: 280px;
+  }
+  @include mq($from: lg) {
+    max-width: 360px;
+  }
+}
+
+.graph-bottom .graph-y-axis__item {
+  padding-top: 20px;
+  padding-right: 12px;
+  padding-bottom: 20px;
+
+  @include mq($from: md) {
+    padding-right: 16px;
+  }
+  @include mq($from: lg) {
+    padding-right: 35px;
+  }
+}
+
+.graph-bottom .graph-field__item-5 { width: 7%; }
+.graph-bottom .graph-field__item-7 { width: 10%; }
+.graph-bottom .graph-field__item-14 { width: 20%; }
+.graph-bottom .graph-field__item-29 { width: 40%; }
+.graph-bottom .graph-field__item-50 { width: 70%; }
+

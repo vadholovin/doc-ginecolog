@@ -1,0 +1,39 @@
+/* ==========================================================================
+   #HERO
+   ========================================================================== */
+
+.hero {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+  color: #fff;
+  background-color: $bg-highlight;
+  background-image:
+    url(../img/general/pattern-1.png),
+    url(../img/general/pattern-2.png);
+  background-position:
+    bottom left,
+    top right;
+  background-repeat: no-repeat;
+  background-size: 50%, 60%;
+
+  @include mq($from: md) {
+    padding-top: 130px;
+    padding-bottom: 115px;
+    background-size: auto, auto;
+  }
+}
+
+.hero__heading {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__subheading {
+  margin: 0;
+
+  @include mq($from: xs) {
+    display: none;
+  }
+}

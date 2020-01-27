@@ -1,0 +1,40 @@
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @include mq($from: md) {
+    margin-left: -32px;
+    margin-right: -32px;
+  }
+  @include mq($from: lg) {
+    margin-left: -42px;
+    margin-right: -42px;
+  }
+}
+
+.grid__col {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include mq($from: md) {
+    padding-left: rem(32px);
+    padding-right: rem(32px);
+  }
+  @include mq($from: lg) {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+}
+
+.grid__col-md-6 {
+  @include mq($from: md) {
+    width: 50%;
+  }
+}

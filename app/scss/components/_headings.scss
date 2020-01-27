@@ -1,0 +1,46 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: rem(30px);
+
+  @include mq($from: xs) {
+    font-size: rem(36px);
+  }
+
+  @include mq($from: sm) {
+    font-size: rem(48px);
+  }
+
+  @include mq($from: md) {
+    font-size: rem(56px);
+  }
+
+  @include mq($from: lg) {
+    font-size: rem(68px);
+  }
+}
+
+h2 {
+  margin-top: rem(60px);
+  margin-bottom: rem(60px);
+  font-size: rem(24px);
+
+  @include mq($from: xs) {
+    font-size: rem(32px);
+  }
+  @include mq($from: sm) {
+    font-size: rem(36px);
+  }
+  @include mq($from: md) {
+    font-size: rem(40px);
+  }
+  @include mq($from: lg) {
+    margin-top: rem(100px);
+    margin-bottom: rem(100px);
+    font-size: rem(48px);
+  }
+}

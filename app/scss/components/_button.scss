@@ -1,0 +1,83 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+.btn {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  user-select: none;
+  padding: 20px 16px;
+  border: 2px solid transparent;
+  line-height: 1.15;
+  font-weight: 600;
+  font-size: rem(16px);
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  overflow: hidden;
+  transition:
+    background-color $ease-main,
+    border-color $ease-main,
+    box-shadow $ease-main,
+    color $ease-main;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  @include mq($from: sm) {
+    font-size: rem(18px);
+  }
+  @include mq($from: md) {
+    font-size: rem(20px);
+  }
+  @include mq($from: lg) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: rem(24px);
+  }
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn--primary {
+  color: #fff;
+  background-color: $bg-highlight;
+
+  &:hover {
+    color: $text-highlight;
+    border-color: $bg-highlight;
+    background-color: #fff;
+  }
+}
+
+.btn__note {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  color: rgba(#000, 0.5);
+
+  @include mq($from: lg) {
+    font-size: rem(22px);
+  }
+}

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   #BANNER-AIM-SECTION
+   ========================================================================== */
+
+.banner-aim-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq($from: md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include mq($from: lg) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.banner-aim {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 36px 32px;
+  border: 5px solid $pink;
+
+  @include mq($from: lg) {
+    padding-top: 48px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+.banner-aim__col-left {
+  width: 100%;
+  margin-bottom: 2.5rem;
+
+  @include mq($from: md) {
+    margin-bottom: 0;
+    width: 45%;
+    padding-right: 40px;
+    border-right: 1px solid rgba(#000, 0.25);
+  }
+}
+.banner-aim__col-rigth {
+  width: 100%;
+  
+  @include mq($from: md) {
+    width: 55%;
+    padding-left: 90px;
+  }
+}
+
+.banner-aim__heading--bigger {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: rem(24px);
+  line-height: 1.165;
+
+  @include mq($from: xs) {
+    font-size: rem(32px);
+  }
+  @include mq($from: sm) {
+    font-size: rem(36px);
+  }
+  @include mq($from: md) {
+    font-size: rem(40px);
+  }
+  @include mq($from: lg) {
+    font-size: rem(48px);
+  }
+}
+
+.banner-aim__list {
+
+  li + li {
+
+    @include mq($from: lg) {
+      margin-top: rem(40px);
+    }
+    
+  }
+
+  .icon svg {
+    width: 48px;
+    height: 48px;
+
+    @include mq($from: lg) {
+      width: 85px;
+      height: 85px;
+    }
+  }
+}

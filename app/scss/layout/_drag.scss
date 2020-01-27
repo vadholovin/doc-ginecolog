@@ -1,0 +1,51 @@
+/* ==========================================================================
+   #DRAG
+   ========================================================================== */
+
+.drag {
+  position: relative;
+  margin-bottom: rem(72px);
+  border-bottom: 1px dashed $grey;
+
+  @include mq($from: lg) {
+    margin-bottom: rem(100px);
+  }
+}
+
+.drag > * {
+  margin-bottom: rem(36px);
+
+  @include mq($from: lg) {
+    margin-bottom: rem(50px);
+  }
+}
+
+.drag-img img {
+  display: block;
+  position: relative;
+  margin-left: -40px;
+
+  .drag-1 & {
+
+    @include mq($from: md) {
+      margin-top: 24px;
+    }
+  }
+}
+
+.drag-img__caption {
+  font-weight: 600;
+}
+
+.drag-info > * {
+  margin-bottom: 0;
+}
+
+.drag-info__heading {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.drag-warning {
+  margin-top: auto;
+}

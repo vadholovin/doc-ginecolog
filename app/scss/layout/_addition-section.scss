@@ -1,0 +1,159 @@
+/* ==========================================================================
+   #ADDITION-SECTION
+   ========================================================================== */
+
+.addition-section {
+  display: none;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #FFFFFF;
+  box-shadow: 0px -5px 35px rgba(0, 0, 0, 0.05);
+
+  @include mq($from: lg) {
+    padding-top: 80px;
+    bottom: 100px;
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.addition-section h2 {
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @include mq($from: lg) {
+    margin-bottom: 50px;
+  }
+}
+
+.addition__subheading {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include mq($from: lg) {
+    margin-bottom: 80px;
+  }
+}
+
+.infotable-addition {
+  margin-bottom: 70px;
+}
+
+.infotable-addition .infotable__head {
+  text-align: center;
+}
+
+.infotable-addition .infotable__head::after {
+  background-color: rgba($bg-grey, 0.1);
+}
+
+.infotable-addition .infotable__body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include mq($from: lg) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+}
+
+.infotable-addition .infotable__col:nth-child(1) {
+
+  .infotable__body {
+    padding-right: 4%;
+
+    @include mq($from: xs) {
+      padding-right: 12%;
+    }
+    @include mq($from: sm) {
+      padding-right: 24%;
+    }
+  }
+
+  .tablet {
+    float: right;
+  }
+
+  .tablet-caption {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    transform: translateX(-80%);
+
+    @include mq($from: sm) {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.infotable-addition .infotable__col:nth-child(2) {
+
+  .infotable__head {
+    color: #fff;
+  }
+
+  .infotable__head::after {
+    background-color: $bg-highlight;
+  }
+  
+  .infotable__body {
+    padding-left: 4%;
+
+    @include mq($from: xs) {
+      padding-left: 12%;
+    }
+    @include mq($from: sm) {
+      padding-left: 24%;
+    }
+  }
+
+  .tablet {
+    float: left;
+  }
+
+  .tablet-caption__top,
+  .tablet-caption__bottom {
+    position: absolute;
+    right: 0;
+    transform: translateX(80%);
+
+    @include mq($from: sm) {
+      transform: translateX(100%);
+    }
+  }
+
+  .tablet-caption__top {
+    top: 35%;
+  }
+
+  .tablet-caption__bottom {
+    top: 56%;
+    white-space: nowrap;
+  }
+}
+
+.tablet {
+  position: relative;
+}
+
+.tablet img {
+
+  @include mq($until: xs) {
+    width: 140px;
+  }
+}
+
+.addition__foot h3 {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.addition__foot .divider {
+  margin-bottom: 40px;
+
+  @include mq($from: lg) {
+    margin-top: 80px;
+  }
+}

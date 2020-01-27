@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #DIAGNOSIS-SECTION
+   ========================================================================== */
+
+.diagnosis-section {
+  padding-top: 60px;
+  box-shadow: 0px -5px 35px rgba(0, 0, 0, 0.05);
+
+  @include mq($from: lg) {
+    padding-top: 100px;
+  }
+}
+
+.diagnosis__heading {
+  margin-top: 0;
+  margin-bottom: rem(28px);
+}

@@ -1,0 +1,85 @@
+/* ==========================================================================
+   #DATE-LIST
+   ========================================================================== */
+
+.date-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: #FFFFFF;
+
+  @include mq($from: lg) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.date-list__item::before,
+.date-list__item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+}
+
+.date-list__item::before {
+  top: 0;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.date-list__item::after {
+  height: 0;
+  border-top: 15px solid $pink;
+}
+
+.date-list__item + .date-list__item {
+  margin-top: 36px;
+}
+
+.date-list__item-date {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+  font-size: rem(36px);
+  line-height: 1.15;
+  color: $text-highlight;
+  text-align: center;
+  white-space: nowrap;
+
+  @include mq($from: xs) {
+    width: 42%;
+    margin-bottom: 0;
+  }
+  @include mq($from: sm) {
+    font-size: rem(40px);
+  }
+
+  @include mq($from: md) {
+    font-size: rem(56px);
+  }
+
+  @include mq($from: lg) {
+    font-size: rem(64px);
+  }
+}
+
+.date-list__item-text {
+  display: block;
+
+  @include mq($from: xs) {
+    width: 58%;
+    padding-left: 40px;
+    border-left: 1px solid rgba(#000, 0.3);
+  }
+  @include mq($from: sm) {
+    padding-left: 60px;
+  }
+  @include mq($from: lg) {
+    padding-left: 80px;
+  }
+}

@@ -1,0 +1,67 @@
+/* ==========================================================================
+   #DRUG-FOOT
+   ========================================================================== */
+
+.drug-foot {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #FFFFFF;
+  box-shadow: 0px -5px 35px rgba(0, 0, 0, 0.05);
+
+  @include mq($from: md) {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+  @include mq($from: lg) {
+    padding-top: 100px;
+    padding-bottom: 85px;
+  }
+}
+
+.drug-foot h2 {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: rem(60px);
+
+  @include mq($from: md) {
+    margin-bottom: rem(70px);
+  }
+  @include mq($from: lg) {
+    margin-bottom: rem(90px);
+  }
+}
+
+.drug-foot__grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1096px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drug-foot__col-left {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding-right: 86px;
+}
+
+.drug-foot__col-right {
+  flex-shrink: 0;
+
+  @include mq($from: md) {
+    width: 36.5%;
+  }
+}
+
+.border-b-box {
+  padding: 32px 46px;
+  border-bottom: 15px solid $pink;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+
+  .icon-flag__text {
+    font-weight: 600;
+  }
+}

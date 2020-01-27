@@ -1,0 +1,101 @@
+/* ==========================================================================
+   #ACCORDION
+   ========================================================================== */
+
+.accordion-item {
+  position: relative;
+  margin: 0;
+  
+}
+
+.accordion-item + .accordion-item {
+  border-top: 1px solid rgba(#000, 0.1);
+}
+
+.accordion-item__heading {
+  position: relative;
+  margin: 0;
+  padding-top: 36px;
+  padding-right: 72px;
+  padding-bottom: 36px;
+  font-weight: normal;
+  text-align: left;
+
+  .is-active & {
+    color: #fff;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 100vw;
+      transform: translateX(-50%);
+      background-color: $bg-highlight;
+      z-index: -1;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.accordion-item__heading-text {
+  width: 84%;
+}
+
+.accordion-item__button {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 24px;
+  color: inherit;
+  transform: translateY(-50%);
+
+  &:focus,
+  &:hover {
+    outline: none;
+    opacity: 0.5;
+  }
+}
+
+.accordion-item__button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion-item__icon-plus {
+  
+  .is-active & {
+    display: none;
+  }
+}
+
+.accordion-item__icon-minus {
+  display: none;
+
+  .is-active & {
+    display: block;
+  }
+}
+
+.accordion-item__content {
+  display: none;
+  padding-top: rem(40px);
+  padding-bottom: rem(40px);
+
+  @include mq($from: md) {
+    padding-top: rem(70px);
+    padding-bottom: rem(70px);
+  }
+
+  .is-active & {
+    display: block;
+  }
+}

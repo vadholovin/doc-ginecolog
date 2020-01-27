@@ -1,0 +1,51 @@
+/* ==========================================================================
+   #DRUG-SECTION
+   ========================================================================== */
+
+// .drug-section {
+  
+// }
+
+.drug__heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.drug__subheading {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include mq($from: md) {
+    margin-bottom: 80px;
+  }
+  @include mq($from: lg) {
+    margin-bottom: 100px;
+  }
+}
+
+.drug-section .date-list {
+  margin-bottom: 60px;
+
+  @include mq($from: md) {
+    margin-bottom: 80px;
+  }
+  @include mq($from: lg) {
+    margin-bottom: 120px;
+  }
+}
+
+.drug-section .btn {
+  max-width: 520px;
+}
+
+.drug-section .btn__note {
+  margin-bottom: 60px;
+
+  @include mq($from: md) {
+    margin-bottom: 80px;
+  }
+  @include mq($from: lg) {
+    margin-bottom: 100px;
+  }
+}
+

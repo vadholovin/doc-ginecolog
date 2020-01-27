@@ -1,0 +1,134 @@
+/* ==========================================================================
+   #GRAPH
+   ========================================================================== */
+
+.graph {
+  display: flex;
+}
+
+.graph-y-axis,
+.graph-y-axis__item,
+.graph-body,
+.graph-field,
+.graph-field__cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.graph-y-axis {
+  flex-shrink: 0;
+  padding-bottom: 62px;
+
+  @include mq($from: md) {
+    padding-bottom: 72px;
+  }
+}
+
+.graph-y-axis__item {
+  justify-content: center; 
+  position: relative;
+  flex-grow: 1;
+  text-align: right;
+
+  @include mq($until: xs) {
+    font-size: rem(14px);
+  }
+}
+
+.graph-y-axis__item + .graph-y-axis__item::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  width: 22px;
+  height: 0;
+  border-top: 1px solid #000;
+}
+
+.graph-body {
+  position: relative;
+  flex-grow: 1;
+}
+
+.graph-field {
+  flex-grow: 1;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.graph-field__cell {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.graph-field__item {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  background: $bg-highlight;
+
+  @include mq($from: sm) {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  @include mq($from: lg) {
+    font-size: rem(24px);
+  }
+}
+
+.graph-field__item--highlight {
+  background-color: #48c300;
+}
+
+.graph-x-axis {
+  display: flex;
+}
+
+.graph-x-axis__item {
+  position: relative;
+  flex-grow: 1;
+  padding-top: 45px;
+  font-weight: 600;
+  line-height: 1.15;
+
+  @include mq($until: xs) {
+    font-size: rem(10px);
+  }
+
+  @include mq($from: lg) {
+    font-size: rem(24px);
+  }
+}
+
+.graph-x-axis__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 22px;
+  width: 0;
+  border-left: 1px solid #000;
+}
+
+.graph-x-axis__item:last-child::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 22px;
+  width: 0;
+  border-left: 1px solid #000;
+}
+
+.graph-x-axis__item-value {
+  display: inline-block;
+  position: relative;
+  transform: translateX(-50%);
+}

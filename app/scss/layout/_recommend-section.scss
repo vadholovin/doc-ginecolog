@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #RECOMMEND-SECTION
+   ========================================================================== */
+
+.recommend-section {
+  padding-bottom: 60px;
+  text-align: center;
+
+  @include mq($from: md) {
+    padding-bottom: 80px;
+  }
+  @include mq($from: lg) {
+    padding-bottom: 100px;
+  }
+
+  h2 {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    max-width: 570px;
+    line-height: 1.3;
+  }
+}

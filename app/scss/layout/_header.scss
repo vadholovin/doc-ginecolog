@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.header {
+  background-color: #fff;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 12px 0;
+}
+
+.header__note {
+  display: none;
+  margin: 0;
+  font-weight: bold;
+  font-size: rem(16px);
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-align: right;
+
+  @include mq($from: xs) {
+    display: block;
+  }
+}

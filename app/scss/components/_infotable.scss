@@ -1,0 +1,92 @@
+/* ==========================================================================
+   #INFOTABLE
+   ========================================================================== */
+
+.infotable {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.infotable::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  border-top: 1px solid rgba(#222, 0.2);
+  transform: translateX(-50%);
+}
+
+.infotable__col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
+  @include mq($from: md) {
+    width: 50%;
+  }
+}
+
+.infotable__head {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.infotable__head h3 {
+  position: relative;
+  margin: 0;
+  z-index: 2;
+}
+
+.infotable__col:last-child h3 {
+  color: #fff;
+}
+
+.infotable__head::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  z-index: 1;
+  transform: translateX(-50%);
+  background-color: rgba(#222, 0.1);
+
+  @include mq($from: md) {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+}
+
+.infotable__col:last-child .infotable__head::after {
+  background-color: $bg-highlight;
+
+  @include mq($from: md) {
+    right: auto;
+    left: 0;
+    transform: none;
+  }
+}
+
+.infotable__body {
+  flex-grow: 1;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.infotable__col:first-child .infotable__body {
+
+  @include mq($from: md) {
+    border-right: 1px solid rgba(#222, 0.2);
+  }
+}
+
+.infotable__body ul {
+  margin-bottom: 0;
+}

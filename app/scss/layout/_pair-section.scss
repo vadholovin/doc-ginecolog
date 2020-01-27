@@ -1,0 +1,34 @@
+/* ==========================================================================
+   #PAIR-SECTION
+   ========================================================================== */
+
+.pair-section {
+  padding-bottom: 80px;
+
+  .list-ordered {
+    
+    @include mq($from: lg) {
+      font-size: rem(24px);
+    }
+  }
+}
+
+.instruction {
+
+  @include mq($from: lg) {
+    font-size: rem(24px);
+  }
+}
+
+.instruction h3 {
+  margin-top: 80px;
+  margin-bottom: 50px;
+
+  @include mq($from: lg) {
+    margin-top: 100px;
+  }
+}
+
+.instruction p {
+  margin-bottom: 10px;
+}

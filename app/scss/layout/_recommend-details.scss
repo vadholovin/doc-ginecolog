@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #RECOMMEND-DETAILS
+   ========================================================================== */
+
+.recommend-details {
+  display: none;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #FFFFFF;
+  box-shadow: 0px -5px 35px rgba(0, 0, 0, 0.05);
+
+  @include mq($from: lg) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.recommend-details h2 {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+}
+
+.recommend-details__subheading {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include mq($from: lg) {
+    margin-bottom: 80px;
+  }
+}
+
+.infotable-recommend .infotable__head {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @include mq($from:md) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+}
+
+.infotable-recommend .infotable__body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @include mq($from: sm) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include mq($from: md) {
+    padding-left: 40px;
+  }
+  @include mq($from: lg) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+  }
+}
