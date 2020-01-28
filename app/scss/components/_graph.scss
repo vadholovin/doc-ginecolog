@@ -88,26 +88,11 @@
 }
 
 .graph-x-axis {
+  position: relative;
   display: flex;
 }
 
-.graph-x-axis__item {
-  position: relative;
-  flex-grow: 1;
-  padding-top: 45px;
-  font-weight: 600;
-  line-height: 1.15;
-
-  @include mq($until: xs) {
-    font-size: rem(10px);
-  }
-
-  @include mq($from: lg) {
-    font-size: rem(24px);
-  }
-}
-
-.graph-x-axis__item::before {
+.graph-x-axis::before {
   content: '';
   position: absolute;
   left: 0;
@@ -117,7 +102,24 @@
   border-left: 1px solid #000;
 }
 
-.graph-x-axis__item:last-child::after {
+.graph-x-axis__start {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  .graph-x-axis__item-value {
+    transform: translateX(-50%);
+  }
+}
+
+.graph-x-axis__item {
+  position: relative;
+  flex-grow: 1;
+  padding-top: 45px;
+  text-align: right;
+}
+
+.graph-x-axis__item::after {
   content: '';
   position: absolute;
   right: 0;
@@ -130,5 +132,15 @@
 .graph-x-axis__item-value {
   display: inline-block;
   position: relative;
-  transform: translateX(-50%);
+  transform: translateX(50%);
+  font-weight: 600;
+  line-height: 1.15;
+
+  @include mq($until: xs) {
+    font-size: rem(10px);
+  }
+
+  @include mq($from: lg) {
+    font-size: rem(24px);
+  }
 }

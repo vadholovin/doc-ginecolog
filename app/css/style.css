@@ -895,32 +895,12 @@ h2 {
 }
 
 .graph-x-axis {
+  position: relative;
   display: -webkit-box;
   display: flex;
 }
 
-.graph-x-axis__item {
-  position: relative;
-  -webkit-box-flex: 1;
-          flex-grow: 1;
-  padding-top: 45px;
-  font-weight: 600;
-  line-height: 1.15;
-}
-
-@media (max-width: 31.24em) {
-  .graph-x-axis__item {
-    font-size: 0.625rem;
-  }
-}
-
-@media (min-width: 81.25em) {
-  .graph-x-axis__item {
-    font-size: 1.5rem;
-  }
-}
-
-.graph-x-axis__item::before {
+.graph-x-axis::before {
   content: '';
   position: absolute;
   left: 0;
@@ -930,7 +910,26 @@ h2 {
   border-left: 1px solid #000;
 }
 
-.graph-x-axis__item:last-child::after {
+.graph-x-axis__start {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.graph-x-axis__start .graph-x-axis__item-value {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.graph-x-axis__item {
+  position: relative;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  padding-top: 45px;
+  text-align: right;
+}
+
+.graph-x-axis__item::after {
   content: '';
   position: absolute;
   right: 0;
@@ -943,8 +942,22 @@ h2 {
 .graph-x-axis__item-value {
   display: inline-block;
   position: relative;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+@media (max-width: 31.24em) {
+  .graph-x-axis__item-value {
+    font-size: 0.625rem;
+  }
+}
+
+@media (min-width: 81.25em) {
+  .graph-x-axis__item-value {
+    font-size: 1.5rem;
+  }
 }
 
 /* ==========================================================================
@@ -1455,11 +1468,11 @@ h2 {
 }
 
 .graph-top .graph-field__item-55 {
-  width: 77%;
+  width: 91%;
 }
 
 .graph-top .graph-field__item-43 {
-  width: 59%;
+  width: 70%;
 }
 
 /* #graph-section-2
@@ -1504,27 +1517,27 @@ h2 {
 }
 
 .graph-mid .graph-field__item-5 {
-  width: 8%;
+  width: 10%;
 }
 
 .graph-mid .graph-field__item-7 {
-  width: 12%;
+  width: 14%;
 }
 
 .graph-mid .graph-field__item-12 {
-  width: 20%;
-}
-
-.graph-mid .graph-field__item-15 {
   width: 24%;
 }
 
+.graph-mid .graph-field__item-15 {
+  width: 30%;
+}
+
 .graph-mid .graph-field__item-23 {
-  width: 38%;
+  width: 46%;
 }
 
 .graph-mid .graph-field__item-40 {
-  width: 66%;
+  width: 80%;
 }
 
 /* #graph-section-3
@@ -1571,23 +1584,23 @@ h2 {
 }
 
 .graph-bottom .graph-field__item-5 {
-  width: 7%;
-}
-
-.graph-bottom .graph-field__item-7 {
   width: 10%;
 }
 
+.graph-bottom .graph-field__item-7 {
+  width: 14%;
+}
+
 .graph-bottom .graph-field__item-14 {
-  width: 20%;
+  width: 24%;
 }
 
 .graph-bottom .graph-field__item-29 {
-  width: 40%;
+  width: 58%;
 }
 
 .graph-bottom .graph-field__item-50 {
-  width: 70%;
+  width: 100%;
 }
 
 /* ==========================================================================
